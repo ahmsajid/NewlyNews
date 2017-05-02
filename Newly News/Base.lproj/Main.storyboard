@@ -48,49 +48,69 @@
                                     <navigationItem title="Newly News" id="Bxv-cj-US2"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hEK-1p-He9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hEK-1p-He9">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="170" id="aoo-pK-Wk7">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="170"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleCell" rowHeight="200" id="aoo-pK-Wk7" customClass="ArticleCellTableViewCell" customModule="Newly_News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aoo-pK-Wk7" id="hNs-Mc-gXg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbk-bc-AAn">
-                                                    <rect key="frame" x="8" y="20" width="130" height="130"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cbk-bc-AAn">
+                                                    <rect key="frame" x="8" y="35" width="130" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="gNq-Pf-3iI"/>
+                                                        <constraint firstAttribute="height" constant="130" id="ucP-wu-RT2"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title!!! Title!!! Title!!! Title!!! Title!!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-Vz-7zC">
-                                                    <rect key="frame" x="146" y="20" width="213" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title!!! Title!!! Title!!! Title!!! Title!!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-Vz-7zC">
+                                                    <rect key="frame" x="146" y="35" width="213" height="44"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ0-yp-lMj">
-                                                    <rect key="frame" x="146" y="72" width="213" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ0-yp-lMj">
+                                                    <rect key="frame" x="146" y="87" width="213" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzH-KX-6As">
-                                                    <rect key="frame" x="315.5" y="144.5" width="43.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="324" y="173.5" width="42.5" height="18"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RzH-KX-6As" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DZ0-yp-lMj" secondAttribute="bottom" constant="8" id="1as-2j-sUB"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="RzH-KX-6As" secondAttribute="trailing" constant="8" id="462-6y-0vJ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="RzH-KX-6As" secondAttribute="bottom" id="v7D-Ic-a04"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RzH-KX-6As" secondAttribute="bottom" id="6jP-Nb-Wh3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RzH-KX-6As" secondAttribute="trailing" id="ASj-5p-mKE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DZ0-yp-lMj" secondAttribute="trailing" constant="8" id="DTa-ve-gza"/>
+                                                <constraint firstItem="DZ0-yp-lMj" firstAttribute="leading" secondItem="cbk-bc-AAn" secondAttribute="trailing" constant="8" id="J9O-lZ-rhR"/>
+                                                <constraint firstItem="cbk-bc-AAn" firstAttribute="centerY" secondItem="hNs-Mc-gXg" secondAttribute="centerY" id="L1c-l2-iSe"/>
+                                                <constraint firstItem="RzH-KX-6As" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DZ0-yp-lMj" secondAttribute="bottom" constant="8" id="Ndw-Bz-CsD"/>
+                                                <constraint firstItem="oMo-Vz-7zC" firstAttribute="leading" secondItem="cbk-bc-AAn" secondAttribute="trailing" constant="8" id="Rjp-bb-fP4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oMo-Vz-7zC" secondAttribute="trailing" constant="8" id="Zdc-oG-Rhv"/>
+                                                <constraint firstItem="cbk-bc-AAn" firstAttribute="leading" secondItem="hNs-Mc-gXg" secondAttribute="leadingMargin" id="kmq-Vv-an6"/>
+                                                <constraint firstItem="DZ0-yp-lMj" firstAttribute="top" secondItem="oMo-Vz-7zC" secondAttribute="bottom" constant="8" id="pGN-nf-I12"/>
+                                                <constraint firstItem="oMo-Vz-7zC" firstAttribute="top" secondItem="cbk-bc-AAn" secondAttribute="top" id="whl-LX-zsr"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleAuthor" destination="RzH-KX-6As" id="YRo-at-2Dr"/>
+                                            <outlet property="articleDescription" destination="DZ0-yp-lMj" id="f0p-oW-9m9"/>
+                                            <outlet property="articleImgView" destination="cbk-bc-AAn" id="m5B-Rn-5pf"/>
+                                            <outlet property="articleTitle" destination="oMo-Vz-7zC" id="Bo0-WQ-n5O"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1b1-kh-buo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3bR-UG-AYE"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,6 +128,10 @@
                             <constraint firstItem="rxJ-Bu-rDq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qn2-LA-Qfd"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="tableView" destination="hEK-1p-He9" id="K1n-gs-u0H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

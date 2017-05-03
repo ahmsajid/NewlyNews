@@ -41,7 +41,7 @@
                                     <color key="textColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="News Reader" id="Ppj-K3-U7h"/>
+                                    <navigationItem title="Newly News" id="Ppj-K3-U7h"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="199" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wId-68-X15">
@@ -131,6 +131,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11361" y="-2460"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="1xw-Hi-TBj">
+            <objects>
+                <viewController storyboardIdentifier="mainToWebVC" id="Uxx-aE-6dB" customClass="WebViewController" customModule="Newly_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mBP-wg-4WA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cja-OF-4qn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s0U-NI-hb5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9iv-5D-eOt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.45059361310000001" green="0.61523904870000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFt-qk-5eO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.45059361310000001" green="0.61523904870000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.45059361310000001" green="0.61523904870000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Newly News" id="kT2-D3-Tki">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="h9O-Iy-5Fk">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="tU7-jz-at5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9T-NL-idF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t9T-NL-idF" firstAttribute="top" secondItem="iFt-qk-5eO" secondAttribute="bottom" id="8PB-tz-T7b"/>
+                            <constraint firstItem="iFt-qk-5eO" firstAttribute="leading" secondItem="s0U-NI-hb5" secondAttribute="leading" id="PPg-2A-rca"/>
+                            <constraint firstItem="9iv-5D-eOt" firstAttribute="leading" secondItem="s0U-NI-hb5" secondAttribute="leading" id="Sdv-L4-IRz"/>
+                            <constraint firstItem="t9T-NL-idF" firstAttribute="leading" secondItem="s0U-NI-hb5" secondAttribute="leading" id="UXm-1Q-r92"/>
+                            <constraint firstAttribute="trailing" secondItem="iFt-qk-5eO" secondAttribute="trailing" id="gRQ-Qa-ffZ"/>
+                            <constraint firstItem="iFt-qk-5eO" firstAttribute="top" secondItem="mBP-wg-4WA" secondAttribute="bottom" id="hbl-la-9Ah"/>
+                            <constraint firstAttribute="trailing" secondItem="9iv-5D-eOt" secondAttribute="trailing" id="kDn-Ck-kJv"/>
+                            <constraint firstAttribute="trailing" secondItem="t9T-NL-idF" secondAttribute="trailing" id="lsd-V3-Df7"/>
+                            <constraint firstItem="Cja-OF-4qn" firstAttribute="top" secondItem="t9T-NL-idF" secondAttribute="bottom" id="mY8-lA-SRa"/>
+                            <constraint firstItem="t9T-NL-idF" firstAttribute="top" secondItem="iFt-qk-5eO" secondAttribute="bottom" id="qJU-ag-rqx"/>
+                            <constraint firstItem="9iv-5D-eOt" firstAttribute="top" secondItem="s0U-NI-hb5" secondAttribute="top" id="x2X-yv-CLb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="t9T-NL-idF" id="Hfs-eu-ANg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="60g-05-b6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12133.6" y="-2460.7196401799101"/>
         </scene>
     </scenes>
 </document>

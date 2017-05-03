@@ -56,12 +56,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             } catch let error {
                 print(error)
             }
-            
-            
         }
-        
         task.resume()
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,7 +79,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return self.articles?.count ?? 0
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainToWebVC") as! WebViewController
         
@@ -92,6 +87,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.present(webVC, animated: true, completion: nil)
     }
     
+    //MARK: Menu
+    
+    //creating an object of the menu manager
+    let menuManager = MenuManager()
+    
+    @IBAction func menuBarButton(_ sender: Any) {
+        
+        menuManager.openMenu()
+    }
 }
 
 extension UIImageView {

@@ -62,23 +62,23 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cbk-bc-AAn">
                                                     <rect key="frame" x="8" y="35" width="130" height="130"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="130" id="gNq-Pf-3iI"/>
-                                                        <constraint firstAttribute="height" constant="130" id="ucP-wu-RT2"/>
+                                                        <constraint firstAttribute="width" constant="130" id="ABI-Nn-1RX"/>
+                                                        <constraint firstAttribute="height" constant="130" id="KD3-C5-c4O"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title!!! Title!!! Title!!! Title!!! Title!!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-Vz-7zC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title!!! Title!!! Title!!! Title!!! Title!!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-Vz-7zC">
                                                     <rect key="frame" x="146" y="35" width="213" height="44"/>
                                                     <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ0-yp-lMj">
-                                                    <rect key="frame" x="146" y="87" width="213" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description!!! Description!!! Description!!! Description!!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ0-yp-lMj">
+                                                    <rect key="frame" x="146" y="87" width="213" height="21"/>
                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzH-KX-6As">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzH-KX-6As">
                                                     <rect key="frame" x="324" y="173.5" width="42.5" height="18"/>
                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,24 +86,24 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="RzH-KX-6As" secondAttribute="bottom" id="6jP-Nb-Wh3"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="RzH-KX-6As" secondAttribute="trailing" id="ASj-5p-mKE"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="DZ0-yp-lMj" secondAttribute="trailing" constant="8" id="DTa-ve-gza"/>
-                                                <constraint firstItem="DZ0-yp-lMj" firstAttribute="leading" secondItem="cbk-bc-AAn" secondAttribute="trailing" constant="8" id="J9O-lZ-rhR"/>
-                                                <constraint firstItem="cbk-bc-AAn" firstAttribute="centerY" secondItem="hNs-Mc-gXg" secondAttribute="centerY" id="L1c-l2-iSe"/>
-                                                <constraint firstItem="RzH-KX-6As" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DZ0-yp-lMj" secondAttribute="bottom" constant="8" id="Ndw-Bz-CsD"/>
-                                                <constraint firstItem="oMo-Vz-7zC" firstAttribute="leading" secondItem="cbk-bc-AAn" secondAttribute="trailing" constant="8" id="Rjp-bb-fP4"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="oMo-Vz-7zC" secondAttribute="trailing" constant="8" id="Zdc-oG-Rhv"/>
-                                                <constraint firstItem="cbk-bc-AAn" firstAttribute="leading" secondItem="hNs-Mc-gXg" secondAttribute="leadingMargin" id="kmq-Vv-an6"/>
-                                                <constraint firstItem="DZ0-yp-lMj" firstAttribute="top" secondItem="oMo-Vz-7zC" secondAttribute="bottom" constant="8" id="pGN-nf-I12"/>
-                                                <constraint firstItem="oMo-Vz-7zC" firstAttribute="top" secondItem="cbk-bc-AAn" secondAttribute="top" id="whl-LX-zsr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RzH-KX-6As" secondAttribute="trailing" id="0gU-sG-7Lp"/>
+                                                <constraint firstItem="DZ0-yp-lMj" firstAttribute="leading" secondItem="cbk-bc-AAn" secondAttribute="trailing" constant="8" id="6ac-xI-FdI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oMo-Vz-7zC" secondAttribute="trailing" constant="8" id="9X4-OW-Ubi"/>
+                                                <constraint firstItem="RzH-KX-6As" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DZ0-yp-lMj" secondAttribute="bottom" constant="8" id="KIh-eY-D1v"/>
+                                                <constraint firstItem="oMo-Vz-7zC" firstAttribute="top" secondItem="cbk-bc-AAn" secondAttribute="top" id="LGE-qw-ibJ"/>
+                                                <constraint firstItem="DZ0-yp-lMj" firstAttribute="top" secondItem="oMo-Vz-7zC" secondAttribute="bottom" constant="8" id="NJu-eI-h3t"/>
+                                                <constraint firstItem="cbk-bc-AAn" firstAttribute="leading" secondItem="hNs-Mc-gXg" secondAttribute="leadingMargin" id="dVu-Qo-xOR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RzH-KX-6As" secondAttribute="bottom" id="ftu-sB-JZZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DZ0-yp-lMj" secondAttribute="trailing" constant="8" id="gmz-PF-ycN"/>
+                                                <constraint firstItem="cbk-bc-AAn" firstAttribute="centerY" secondItem="hNs-Mc-gXg" secondAttribute="centerY" id="oa9-kr-wsJ"/>
+                                                <constraint firstItem="oMo-Vz-7zC" firstAttribute="leading" secondItem="cbk-bc-AAn" secondAttribute="trailing" constant="8" id="z5X-ki-P6D"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="articleAuthor" destination="RzH-KX-6As" id="YRo-at-2Dr"/>
                                             <outlet property="articleDescription" destination="DZ0-yp-lMj" id="f0p-oW-9m9"/>
                                             <outlet property="articleImgView" destination="cbk-bc-AAn" id="m5B-Rn-5pf"/>
                                             <outlet property="articleTitle" destination="oMo-Vz-7zC" id="Bo0-WQ-n5O"/>
+                                            <outlet property="author" destination="RzH-KX-6As" id="5kF-U9-URg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

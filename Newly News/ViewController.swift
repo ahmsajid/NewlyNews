@@ -19,12 +19,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         fetchArticles()
-        
     }
     
     //MARK: Fetching articles using url Request
     func fetchArticles() {
-        let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v1/articles?source=daily-mail&sortBy=top&apiKey=565dee2e9ea84106b8c3069906e1d30f")!)
+        let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v1/articles?source=daily-mail&sortBy=latest&apiKey=565dee2e9ea84106b8c3069906e1d30f")!)
         
         //Creating task that is going to download everything in the url, this URLSession is going to give 3 things, data, response, error
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response,error) in
@@ -48,9 +47,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         let article = Article()
                         
                         //extracting values all at once
-                        if let title = articleFromJSON["title"] as? String, let articleAuthorTitle = articleFromJSON["author"] as? String, let articledescription = articleFromJSON["description"] as? String, let url = articleFromJSON["url"] as? String, let urlToImage = articleFromJSON["urlToImage"] as? String {
+                        if let title = articleFromJSON["title"] as? String, let author = articleFromJSON["author"] as? String, let articledescription = articleFromJSON["description"] as? String, let url = articleFromJSON["url"] as? String, let urlToImage = articleFromJSON["urlToImage"] as? String {
                             
-                            article.authorArticle = articleAuthorTitle
+                            article.author = author
                             article.articleDescription = articledescription
                             article.headlineTitle = title
                             article.url = url
@@ -78,8 +77,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //For every article we are putting one cell
         cell.articleTitle.text = self.articles?[indexPath.item].headlineTitle
         cell.articleDescription.text = self.articles?[indexPath.item].articleDescription
-        cell.articleAuthor.text = self.articles?[indexPath.item].authorArticle
-        
+        cell.author.text = self.articles?[indexPath.item].author
+        cell.articleImgView.downloadImage(from: (self.articles?[indexPath.item].urlImage!)!)
         
         return cell
     }
@@ -92,12 +91,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return self.articles?.count ?? 0
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
+
+
+extension UIImageView {
+    func downloadImage(from url: String) {
+        let urlRequest = URLRequest(url: URL(string: url)!)
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+    
+            if error != nil {
+                print(error)
+                return
+            }
+            DispatchQueue.main.async {
+                self.image = UIImage(data: data!)
+            }
+        }
+        task.resume()
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

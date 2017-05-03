@@ -11,13 +11,13 @@
 		026C64FA1EB7D19800CC44B2 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026C64F91EB7D19800CC44B2 /* Article.swift */; };
 		02B9927A1EB6F02A00CA3ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B992791EB6F02A00CA3ABB /* AppDelegate.swift */; };
 		02B9927C1EB6F02A00CA3ABB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9927B1EB6F02A00CA3ABB /* ViewController.swift */; };
-		02B9927F1EB6F02A00CA3ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B9927D1EB6F02A00CA3ABB /* Main.storyboard */; };
 		02B992811EB6F02A00CA3ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02B992801EB6F02A00CA3ABB /* Assets.xcassets */; };
 		02B992841EB6F02A00CA3ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B992821EB6F02A00CA3ABB /* LaunchScreen.storyboard */; };
 		02B992901EB702D100CA3ABB /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02B9928C1EB702D100CA3ABB /* NotoSans-Bold.ttf */; };
 		02B992911EB702D100CA3ABB /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02B9928D1EB702D100CA3ABB /* NotoSans-BoldItalic.ttf */; };
 		02B992921EB702D100CA3ABB /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02B9928E1EB702D100CA3ABB /* NotoSans-Italic.ttf */; };
 		02B992931EB702D100CA3ABB /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02B9928F1EB702D100CA3ABB /* NotoSans-Regular.ttf */; };
+		02E818EC1EB97F960081F867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02E818EB1EB97F960081F867 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,6 @@
 		02B992761EB6F02A00CA3ABB /* Newly News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Newly News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B992791EB6F02A00CA3ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02B9927B1EB6F02A00CA3ABB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		02B9927E1EB6F02A00CA3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02B992801EB6F02A00CA3ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02B992831EB6F02A00CA3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02B992851EB6F02A00CA3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		02B9928D1EB702D100CA3ABB /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		02B9928E1EB702D100CA3ABB /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		02B9928F1EB702D100CA3ABB /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		02E818EB1EB97F960081F867 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				02B9927B1EB6F02A00CA3ABB /* ViewController.swift */,
 				026C64F91EB7D19800CC44B2 /* Article.swift */,
 				026C64F71EB7D09300CC44B2 /* ArticleCellTableViewCell.swift */,
-				02B9927D1EB6F02A00CA3ABB /* Main.storyboard */,
+				02E818EB1EB97F960081F867 /* Main.storyboard */,
 				02B992801EB6F02A00CA3ABB /* Assets.xcassets */,
 				02B992821EB6F02A00CA3ABB /* LaunchScreen.storyboard */,
 				02B992851EB6F02A00CA3ABB /* Info.plist */,
@@ -150,12 +150,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E818EC1EB97F960081F867 /* Main.storyboard in Resources */,
 				02B992901EB702D100CA3ABB /* NotoSans-Bold.ttf in Resources */,
 				02B992841EB6F02A00CA3ABB /* LaunchScreen.storyboard in Resources */,
 				02B992911EB702D100CA3ABB /* NotoSans-BoldItalic.ttf in Resources */,
 				02B992921EB702D100CA3ABB /* NotoSans-Italic.ttf in Resources */,
 				02B992811EB6F02A00CA3ABB /* Assets.xcassets in Resources */,
-				02B9927F1EB6F02A00CA3ABB /* Main.storyboard in Resources */,
 				02B992931EB702D100CA3ABB /* NotoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,14 +177,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		02B9927D1EB6F02A00CA3ABB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02B9927E1EB6F02A00CA3ABB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		02B992821EB6F02A00CA3ABB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

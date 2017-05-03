@@ -21,64 +21,56 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         fetchArticles()
     }
     
-    //MARK: Fetching articles using url Request
-    func fetchArticles() {
+    func fetchArticles(){
         let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v1/articles?source=daily-mail&sortBy=latest&apiKey=565dee2e9ea84106b8c3069906e1d30f")!)
         
-        //Creating task that is going to download everything in the url, this URLSession is going to give 3 things, data, response, error
-        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response,error) in
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data,response,error) in
             
             if error != nil {
                 print(error)
                 return
             }
             
-            //Create the object right here by creating empty article array.
             self.articles = [Article]()
-            
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String : AnyObject]
                 
-                if let articlesFromJSON = json["articles"] as? [[String : AnyObject]] {
-                    
-                    //Extracting each articles we need
-                    for articleFromJSON in articlesFromJSON {
-                        //Creating an article object that is going to save articles
+                if let articlesFromJson = json["articles"] as? [[String : AnyObject]] {
+                    for articleFromJson in articlesFromJson {
                         let article = Article()
-                        
-                        //extracting values all at once
-                        if let title = articleFromJSON["title"] as? String, let author = articleFromJSON["author"] as? String, let articledescription = articleFromJSON["description"] as? String, let url = articleFromJSON["url"] as? String, let urlToImage = articleFromJSON["urlToImage"] as? String {
+                        if let title = articleFromJson["title"] as? String, let author = articleFromJson["author"] as? String, let desc = articleFromJson["description"] as? String, let url = articleFromJson["url"] as? String, let urlToImage = articleFromJson["urlToImage"] as? String {
                             
                             article.author = author
-                            article.articleDescription = articledescription
-                            article.headlineTitle = title
+                            article.desc = desc
+                            article.headline = title
                             article.url = url
-                            article.urlImage = urlToImage
+                            article.imageUrl = urlToImage
                         }
-                            self.articles?.append(article)
+                        self.articles?.append(article)
                     }
                 }
-                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
                 
-            } catch {
+            } catch let error {
                 print(error)
             }
+            
+            
         }
+        
         task.resume()
+        
     }
     
-    //MARK: TableView Delegates and Datasource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleCellTableViewCell
-        //For every article we are putting one cell
-        cell.articleTitle.text = self.articles?[indexPath.item].headlineTitle
-        cell.articleDescription.text = self.articles?[indexPath.item].articleDescription
+        
+        cell.title.text = self.articles?[indexPath.item].headline
+        cell.desc.text = self.articles?[indexPath.item].desc
         cell.author.text = self.articles?[indexPath.item].author
-        cell.articleImgView.downloadImage(from: (self.articles?[indexPath.item].urlImage!)!)
+        cell.imgView.downloadImage(from: (self.articles?[indexPath.item].imageUrl!)!)
         
         return cell
     }
@@ -91,22 +83,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return self.articles?.count ?? 0
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
-
 extension UIImageView {
-    func downloadImage(from url: String) {
-        let urlRequest = URLRequest(url: URL(string: url)!)
-        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
     
+    func downloadImage(from url: String){
+        
+        let urlRequest = URLRequest(url: URL(string: url)!)
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data,response,error) in
+            
             if error != nil {
                 print(error)
                 return
             }
+            
             DispatchQueue.main.async {
                 self.image = UIImage(data: data!)
             }
@@ -114,7 +105,6 @@ extension UIImageView {
         task.resume()
     }
 }
-
 
 
 

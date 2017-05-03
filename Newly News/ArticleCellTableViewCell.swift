@@ -9,10 +9,10 @@
 import UIKit
 
 class ArticleCellTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var articleImgView: UIImageView!
-    @IBOutlet weak var articleTitle: UILabel!
-    @IBOutlet weak var articleDescription: UILabel!
+    
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var author: UILabel!
     
     override func awakeFromNib() {

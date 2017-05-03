@@ -9,9 +9,9 @@
 import UIKit
 
 class Article: NSObject {
-    var headlineTitle: String?
-    var articleDescription: String?
+    var headline: String?
+    var desc: String?
     var author: String?
     var url: String?
-    var urlImage: String?
+    var imageUrl: String?
 }
